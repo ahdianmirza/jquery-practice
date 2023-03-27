@@ -16,39 +16,55 @@
 
     <div id="box1">Box 1</div>
 
-    <div class="boxes">Baris Pertama</div>
-    <div class="boxes">Baris Kedua</div>
-    <div class="boxes">Baris dua koma lima</div>
-    <div class="boxes">Baris Ketiga</div>
+    <div id="boxes_wrap">
+        <div class="boxes">Baris Pertama</div>
+        <div class="boxes">Baris Kedua</div>
+        <div class="boxes">Baris dua koma lima</div>
+        <div class="boxes">Baris Ketiga</div>
+    </div>
+
+    <form action="">
+        <input type="text" id="inputText">
+        <input type="submit">
+    </form>
 
     <script>
         // memastikan file sudah diload dengan sempurna
-        $(document).ready(function () {
-            $('h1').css('color', 'blue');
-            $('#box1').css('color', 'blue');
-            $('.boxes').css('color', 'blue');
+        // $(document).ready(function () {
+        //     $('h1').css('color', 'blue');
+        //     $('#box1').css('color', 'blue');
+        //     $('.boxes').css('color', 'blue');
 
-            $('.boxes:first').css('color', 'red');
-            $('.boxes:last').css('color', 'aqua');
+        //     $('.boxes:first').css('color', 'red');
+        //     $('.boxes:last').css('color', 'aqua');
 
-            $('.boxes:eq(2)').css('color', 'red');
+        //     $('.boxes:eq(2)').css('color', 'red');
 
-            // event
-            $('h1').click(() => {
-                $('h1').css('color', 'red');
-            });
+        //     // event
+        //     $('h1').click(() => {
+        //         $('h1').css('color', 'red');
+        //     });
 
-            $('h1').mouseenter(() => {
-                $('h1').css('color', 'yellow');
-            });
+        //     $('h1').mouseenter(() => {
+        //         $('h1').css('color', 'yellow');
+        //     });
 
-            $('h1').mouseleave(() => {
-                $('h1').css('color', 'green');
-            });
+        //     $('h1').mouseleave(() => {
+        //         $('h1').css('color', 'green');
+        //     });
 
-            $('.boxes').click(() => {
-                $(this).css('color', 'red');
-            });
+        //     $('.boxes').click(() => {
+        //         $(this).css('color', 'red');
+        //     });
+        // });
+
+        // get dan set nilai
+        $('form').submit(() => {
+            const tulisan = $('#inputText').val();
+            $('h1').text(tulisan);
+
+            // mencegah sifat
+            event.preventDefault();
         });
     </script>
 </body>
