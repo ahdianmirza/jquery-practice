@@ -8,6 +8,15 @@
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
+    <!-- CSS -->
+    <style>
+        #boxes_wrap {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+        }
+    </style>
+
     <title>Belajar JQuery</title>
 </head>
 
@@ -66,6 +75,13 @@
             // mencegah sifat
             event.preventDefault();
         });
+
+        // menambahkan dan menghapus
+        // append prepend | after before
+        $('#boxes_wrap').before('<div>Hallo</div>');
+
+        // remove dan empty
+        $('#boxes_wrap').remove();
     </script>
 </body>
 
