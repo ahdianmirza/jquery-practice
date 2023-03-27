@@ -14,6 +14,9 @@
             width: 100px;
             height: 100px;
             background-color: grey;
+            padding: 10px;
+            border: 5px solid black;
+            margin: 10px;
         }
 
         .change {
@@ -95,7 +98,16 @@
         $('#boxes_wrap').before('<div>Hallo</div>');
 
         // remove dan empty
-        $('#boxes_wrap').remove();
+        // $('#boxes_wrap').remove();
+
+        // dimensi
+        // width -> konten
+        // innerWidth -> konten + padding
+        // outerWidth -> konten + padding + border
+        // (true) -> + margin
+        const nilai = $('#boxes_wrap').outerWidth(true);
+
+        $('#box1').text(nilai);
     </script>
 </body>
 
