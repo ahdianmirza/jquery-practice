@@ -10,7 +10,7 @@
 
     <!-- CSS -->
     <style>
-        #boxes_wrap {
+        #box1 {
             width: 100px;
             height: 100px;
             background-color: grey;
@@ -33,7 +33,11 @@
 
     <div id="box1">Box 1</div>
 
-    <div id="boxes_wrap">
+    <button id="btn1">Show</button>
+    <button id="btn2">Hide</button>
+    <button id="btn3">Toggle</button>
+
+    <!-- <div id="boxes_wrap">
         <div class="boxes">Baris Pertama</div>
         <div class="boxes">Baris Kedua</div>
         <div class="boxes">Baris dua koma lima</div>
@@ -43,33 +47,73 @@
     <form action="">
         <input type="text" id="inputText">
         <input type="submit">
-    </form>
+    </form> -->
 
     <script>
         // memastikan file sudah diload dengan sempurna
-        $(document).ready(function () {
+        $(document).ready(() => {
+            // hide - show - toggle
+            // $('#btn1').click(() => {
+            //     $('#box1').show();
+            // })
+
+            // $('#btn2').click(() => {
+            //     $('#box1').hide();
+            // })
+
+            // $('#btn3').click(() => {
+            //     $('#box1').toggle();
+            // })
+
+            // fadeIn fadeOut fadeTo(time, opacity) fadeToggle
+            // $('#btn1').click(() => {
+            //     $('#box1').fadeIn(2000);
+            // })
+
+            // $('#btn2').click(() => {
+            //     $('#box1').fadeOut(2000);
+            // })
+
+            // $('#btn3').click(() => {
+            //     $('#box1').fadeTo(2000, 0.5);
+            // })
+
+            // slideUp slideDown slideToggle
+            $('#btn1').click(() => {
+                $('#box1').slideDown(2000);
+            })
+
+            $('#btn2').click(() => {
+                $('#box1').slideUp(2000);
+            })
+
+            $('#btn3').click(() => {
+                $('#box1').slideToggle();
+            })
+
+
             // $('h1').css('color', 'blue');
-            $('#box1').css('color', 'blue');
-            $('.boxes').css('color', 'blue');
+            // $('#box1').css('color', 'blue');
+            // $('.boxes').css('color', 'blue');
 
-            $('.boxes:first').css('color', 'red');
-            $('.boxes:last').css('color', 'aqua');
+            // $('.boxes:first').css('color', 'red');
+            // $('.boxes:last').css('color', 'aqua');
 
-            $('.boxes:eq(2)').css('color', 'red');
+            // $('.boxes:eq(2)').css('color', 'red');
 
             // event
-            $('h1').click(() => {
-                // $('h1').css({
-                //     'color': 'red',
-                //     'fontSize': '20px',
-                //     'backgroundColor': 'yellow'
-                // });
+            // $('h1').click(() => {
+            //     // $('h1').css({
+            //     //     'color': 'red',
+            //     //     'fontSize': '20px',
+            //     //     'backgroundColor': 'yellow'
+            //     // });
 
-                // $('h1').addClass('change');
-                // $('h1').removeClass('change');
+            //     // $('h1').addClass('change');
+            //     // $('h1').removeClass('change');
 
-                $('h1').toggleClass('change');
-            });
+            //     $('h1').toggleClass('change');
+            // });
 
             // $('h1').mouseenter(() => {
             //     $('h1').css('color', 'yellow');
@@ -79,23 +123,23 @@
             //     $('h1').css('color', 'green');
             // });
 
-            $('.boxes').click(() => {
-                $(this).css('color', 'red');
-            });
+            // $('.boxes').click(() => {
+            //     $(this).css('color', 'red');
+            // });
         });
 
         // get dan set nilai
-        $('form').submit(() => {
-            const tulisan = $('#inputText').val();
-            $('h1').text(tulisan);
+        // $('form').submit(() => {
+        //     const tulisan = $('#inputText').val();
+        //     $('h1').text(tulisan);
 
-            // mencegah sifat
-            event.preventDefault();
-        });
+        //     // mencegah sifat
+        //     event.preventDefault();
+        // });
 
         // menambahkan dan menghapus
         // append prepend | after before
-        $('#boxes_wrap').before('<div>Hallo</div>');
+        // $('#boxes_wrap').before('<div>Hallo</div>');
 
         // remove dan empty
         // $('#boxes_wrap').remove();
@@ -105,7 +149,7 @@
         // innerWidth -> konten + padding
         // outerWidth -> konten + padding + border
         // (true) -> + margin
-        const nilai = $('#boxes_wrap').width(120).height(120);
+        // const nilai = $('#boxes_wrap').width(120).height(120);
 
         // $('#box1').text(nilai);
     </script>
