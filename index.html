@@ -36,6 +36,7 @@
     <button id="btn1">Show</button>
     <button id="btn2">Hide</button>
     <button id="btn3">Toggle</button>
+    <button id="btn4">Stop</button>
 
     <!-- <div id="boxes_wrap">
         <div class="boxes">Baris Pertama</div>
@@ -80,16 +81,25 @@
 
             // slideUp slideDown slideToggle
             $('#btn1').click(() => {
-                $('#box1').slideDown(2000);
+                $('#box1').slideDown(2000, () => {
+                    alert('Selesai');
+                }); // callback
             })
 
             $('#btn2').click(() => {
-                $('#box1').slideUp(2000);
-            })
+                $('#box1').slideUp(2000).fadeIn(2000).fadeTo(2000, 0.5);
+            }) // chaining
 
             $('#btn3').click(() => {
                 $('#box1').slideToggle();
             })
+
+            $('#btn4').click(() => {
+                $('#box1').stop();
+            })
+
+            // stop animasi - callback - chaining
+
 
 
             // $('h1').css('color', 'blue');
