@@ -31,12 +31,20 @@
 <body>
     <h1 class="change">Belajar JQuery</h1>
 
-    <div id="box1">Box 1</div>
+    <!-- <div id="box1">Box 1</div> -->
 
-    <button id="btn1">Show</button>
+    <ul>
+        <li>Belajar!</li>
+        <li>html</li>
+        <li id="css">css</li>
+        <li>jquery</li>
+        <li>database</li>
+    </ul>
+
+    <!-- <button id="btn1">Show</button>
     <button id="btn2">Hide</button>
     <button id="btn3">Toggle</button>
-    <button id="btn4">Stop</button>
+    <button id="btn4">Stop</button> -->
 
     <!-- <div id="boxes_wrap">
         <div class="boxes">Baris Pertama</div>
@@ -53,6 +61,14 @@
     <script>
         // memastikan file sudah diload dengan sempurna
         $(document).ready(() => {
+            // traversing
+            $('li').first().css('color', 'red');
+            $('li').eq(1).css('color', 'yellow');
+            $('li').last().css('color', 'blue');
+
+            $('li').filter('#css').css('fontSize', '25px');
+            $('li').not('#css').css('backgroundColor', 'yellow');
+
             // hide - show - toggle
             // $('#btn1').click(() => {
             //     $('#box1').show();
@@ -80,23 +96,23 @@
             // })
 
             // slideUp slideDown slideToggle
-            $('#btn1').click(() => {
-                $('#box1').slideDown(2000, () => {
-                    alert('Selesai');
-                }); // callback
-            })
+            // $('#btn1').click(() => {
+            //     $('#box1').slideDown(2000, () => {
+            //         alert('Selesai');
+            //     }); // callback
+            // })
 
-            $('#btn2').click(() => {
-                $('#box1').slideUp(2000).fadeIn(2000).fadeTo(2000, 0.5);
-            }) // chaining
+            // $('#btn2').click(() => {
+            //     $('#box1').slideUp(2000).fadeIn(2000).fadeTo(2000, 0.5);
+            // }) // chaining
 
-            $('#btn3').click(() => {
-                $('#box1').slideToggle();
-            })
+            // $('#btn3').click(() => {
+            //     $('#box1').slideToggle();
+            // })
 
-            $('#btn4').click(() => {
-                $('#box1').stop();
-            })
+            // $('#btn4').click(() => {
+            //     $('#box1').stop();
+            // })
 
             // stop animasi - callback - chaining
 
