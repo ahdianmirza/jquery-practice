@@ -38,7 +38,8 @@
         <li>html</li>
         <li id="css">css</li>
         <li>jquery</li>
-        <li>database</li>
+        <li>php</li>
+        <li id="db">database</li>
     </ul>
 
     <!-- <button id="btn1">Show</button>
@@ -62,12 +63,16 @@
         // memastikan file sudah diload dengan sempurna
         $(document).ready(() => {
             // traversing
-            $('li').first().css('color', 'red');
-            $('li').eq(1).css('color', 'yellow');
-            $('li').last().css('color', 'blue');
+            // $('li').first().css('color', 'red');
+            // $('li').eq(1).css('color', 'yellow');
+            // $('li').last().css('color', 'blue');
 
-            $('li').filter('#css').css('fontSize', '25px');
-            $('li').not('#css').css('backgroundColor', 'yellow');
+            // $('li').filter('#css').css('fontSize', '25px');
+            // $('li').not('#css').css('backgroundColor', 'yellow');
+
+            // siblings next nextAll nextUntil('param') ~ prev
+            $('#css').siblings().css('fontSize', '20px');
+            $('#css').nextUntil('#db').css('color', 'red');
 
             // hide - show - toggle
             // $('#btn1').click(() => {
