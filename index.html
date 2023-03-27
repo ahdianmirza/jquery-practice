@@ -33,6 +33,22 @@
 
             $('.boxes:eq(2)').css('color', 'red');
 
+            // event
+            $('h1').click(() => {
+                $('h1').css('color', 'red');
+            });
+
+            $('h1').mouseenter(() => {
+                $('h1').css('color', 'yellow');
+            });
+
+            $('h1').mouseleave(() => {
+                $('h1').css('color', 'green');
+            });
+
+            $('.boxes').click(() => {
+                $(this).css('color', 'red');
+            });
         });
     </script>
 </body>
